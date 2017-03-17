@@ -32,4 +32,8 @@ Vagrant.configure(2) do |config|
     end
     
     config.vm.synced_folder "./", "/var/www/vagrant/"
+    
+    if not Vagrant.has_plugin?("vagrant-vbguest")
+        config.vm.post_up_message = "Make sure to install VBGuest by running 'vagrant plugin install vagrant-vbguest'."
+    end
 end

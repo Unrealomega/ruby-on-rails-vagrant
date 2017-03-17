@@ -34,7 +34,7 @@ apt-get update
 #
 # Install requirements
 #
-apt-get install curl nodejs -y
+apt-get install -y curl nodejs git
 
 # Set this as the default directory
 echo "cd $www_base" >> /etc/bash.bashrc
