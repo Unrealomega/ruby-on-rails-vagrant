@@ -1,1 +1,1 @@
-A simple vagrant development file and scripts. Just open up a command prompt in the same folder and run **vagrant up*. It should build out a instance as well as start the server for you.
+A simple vagrant development file and scripts. Just open up a command prompt in the same folder and run **vagrant up**. It should build out a instance as well as start the server for you.
