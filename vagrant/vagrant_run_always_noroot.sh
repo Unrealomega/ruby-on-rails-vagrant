@@ -26,6 +26,9 @@ fi
 
 cd $rails_root
 
+echo SYNCING TIME
+ntpdate -s time.nist.gov
+
 echo STARTING SERVER
 
 #
@@ -39,5 +42,9 @@ echo Started server in $PROJECT_VERSION mode
 # Start the rails server
 #
 rails s -b 0.0.0.0 -d -e $PROJECT_VERSION
+
+if [ $PROJECT_VERSION = 'development' ]; then
+    echo "If this your first time deploying this, make sure to ssh into the virt and run \"rake db:create\" within the rails-root folder to create the DB"
+fi
 
 exit 0

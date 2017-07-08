@@ -46,3 +46,6 @@ apt-get install -y mysql-server mysql-client libmysqlclient-dev # MySQL
 
 # Set this as the default directory
 echo "cd $www_base" >> /etc/bash.bashrc
+
+# Update RAILS_ENV to reduce the amount of RAILS_ENV we have to use
+echo "export RAILS_ENV=$PROJECT_VERSION" >> /etc/bash.bashrc
